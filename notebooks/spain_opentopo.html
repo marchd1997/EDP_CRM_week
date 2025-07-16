@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6385308fdd59241d6a84cb76900901f3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6385308fdd59241d6a84cb76900901f3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6385308fdd59241d6a84cb76900901f3 = L.map(
+                "map_6385308fdd59241d6a84cb76900901f3",
+                {
+                    center: [40.0, -3.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fc416629c0f86cdc8c9c0c36e7a96411 = L.tileLayer(
+                "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+                {"attribution": "Map data \u00a9 OpenStreetMap contributors, SRTM | Map style: OpenTopoMap (CC-BY-SA)", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6385308fdd59241d6a84cb76900901f3);
+        
+    
+
+        function geo_json_85c14ac33d0f869433c42e65e9d12fd8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_85c14ac33d0f869433c42e65e9d12fd8 = L.geoJson(null, {
+                onEachFeature: geo_json_85c14ac33d0f869433c42e65e9d12fd8_onEachFeature,
+            
+        });
+
+        function geo_json_85c14ac33d0f869433c42e65e9d12fd8_add (data) {
+            geo_json_85c14ac33d0f869433c42e65e9d12fd8
+                .addData(data)
+                .addTo(map_6385308fdd59241d6a84cb76900901f3);
+        }
+            geo_json_85c14ac33d0f869433c42e65e9d12fd8_add({"bbox": [-8.3965, 37.5021, 0.8423, 42.9692], "features": [{"bbox": [-4.4298, 37.5021, -4.4298, 37.5021], "geometry": {"coordinates": [-4.4298, 37.5021], "type": "Point"}, "id": "0", "properties": {"lat": "37.5021", "lat_lon": "37.5021_-4.4298", "lon": "-4.4298"}, "type": "Feature"}, {"bbox": [0.8423, 41.6591, 0.8423, 41.6591], "geometry": {"coordinates": [0.8423, 41.6591], "type": "Point"}, "id": "1", "properties": {"lat": "41.6591", "lat_lon": "41.6591_0.8423", "lon": "0.8423"}, "type": "Feature"}, {"bbox": [-8.3965, 42.4587, -8.3965, 42.4587], "geometry": {"coordinates": [-8.3965, 42.4587], "type": "Point"}, "id": "2", "properties": {"lat": "42.4587", "lat_lon": "42.4587_-8.3965", "lon": "-8.3965"}, "type": "Feature"}, {"bbox": [-1.9821, 42.9692, -1.9821, 42.9692], "geometry": {"coordinates": [-1.9821, 42.9692], "type": "Point"}, "id": "3", "properties": {"lat": "42.9692", "lat_lon": "42.9692_-1.9821", "lon": "-1.9821"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            var layer_control_036474ee37f2482af8325e39124988de = {
+                base_layers : {
+                    "OpenTopoMap" : tile_layer_fc416629c0f86cdc8c9c0c36e7a96411,
+                },
+                overlays :  {
+                    "Your Data" : geo_json_85c14ac33d0f869433c42e65e9d12fd8,
+                },
+            };
+            L.control.layers(
+                layer_control_036474ee37f2482af8325e39124988de.base_layers,
+                layer_control_036474ee37f2482af8325e39124988de.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_6385308fdd59241d6a84cb76900901f3);
+        
+</script>
+</html>
